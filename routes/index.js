@@ -16,11 +16,11 @@ router.get('/', async (req, res) => {
     const pokeImgUrl = pokeJson.sprites.front_default;
 
     res.cookie('pokeImgUrl', pokeImgUrl, {
-      maxAge: 60000,
+      maxAge: 86400000,
       httpOnly: true,
     });
     res.cookie('pokeName', pokeName, {
-      maxAge: 60000,
+      maxAge: 86400000,
       httpOnly: true,
     });
 
