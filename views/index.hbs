@@ -19,9 +19,7 @@
 
       <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
-          <span class="android-title mdl-layout-title">
-            <p>Poke Playground!</p>
-          </span>
+
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
 
@@ -40,7 +38,7 @@
 
         <nav class="mdl-navigation">
           <span class="mdl-navigation__link" href="#">Games</span>
-          <a class="mdl-navigation__link" href="">Game 1</a>
+          <a class="mdl-navigation__link" href="/fb">Flappy Bird</a>
           <a class="mdl-navigation__link" href="">Game 2</a>
           <a class="mdl-navigation__link" href="">Game 3</a>
           <a class="mdl-navigation__link" href="">Game 4</a>
@@ -59,10 +57,22 @@
         <a name="top"></a>
       </div>
 
+  <div class="mdl-card mdl-shadow--4dp">
+  <div class="mdl-card__media"><img src="{{pokeImgUrl}}" width="173" height="157" border="0"
+   alt="" style="padding:10px;">
+  </div>
+  <div class="mdl-card__supporting-text">
+    Auckland Sky Tower, taken March 24th, 2014
+  </div>
+  <div class="mdl-card__supporting-text">
+    Name: {{pokeName}}
+  The Sky Tower is an observation and telecommunications tower located in Auckland,
+  New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
+  in the Southern Hemisphere.
+  </div>
+</div>
 
-      <h1>Random Id</h1>
-      <p>Name: {{pokeName}}</p>
-      <p><img style="width: 500px;" src="{{pokeImgUrl}}"></p>
+
 
         <footer class="android-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
