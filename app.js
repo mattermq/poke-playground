@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
+const regRouter = require('./routes/reg.js');
 const flappyBirdRouter = require('./routes/flappyBird.js');
 const usersRouter = require('./routes/users');
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/reg', regRouter);
 app.use('/fb', flappyBirdRouter);
 app.use('/users', usersRouter);
 

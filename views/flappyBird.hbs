@@ -1,2 +1,80 @@
-<canvas id="flappy-bird" width="288" height="512"></canvas>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Games</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Leaderboards</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Pokemon of The Day</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="android-drawer mdl-layout__drawer">
+
+        <nav class="mdl-navigation">
+          <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Main</a></span>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Pokemon of The Day</a></span>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="#">Games</span>
+          <a class="mdl-navigation__link" href="/fb">Flappy Bird</a>
+          <a class="mdl-navigation__link" href="">Game 2</a>
+          <a class="mdl-navigation__link" href="">Game 3</a>
+          <a class="mdl-navigation__link" href="">Game 4</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Leaderboards</span>
+          <a class="mdl-navigation__link" href="">Game 1</a>
+          <a class="mdl-navigation__link" href="">Game 2</a>
+          <a class="mdl-navigation__link" href="">Game 3</a>
+          <a class="mdl-navigation__link" href="">Game 4</a>
+          <div class="android-drawer-separator"></div>
+        </nav>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+      </div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <canvas id="flappy-bird" width="288" height="512" style="margin: auto"></canvas>
+  </div>
+</div>
+<div class="mdl-grid">
+  <form>
+    <button id="game-start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+      Press to Play
+    </button>
+  </form>
+</div>
+
+       <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">Sergey Vlasov, 2020</p>
+          </div>
+
+          <div class="mdl-mega-footer--bottom-section">
+            <a class="android-link mdl-typography--font-light" href="">GitHub</a>
+            <a class="android-link mdl-typography--font-light" href="">Telegram</a>
+          </div>
+
+        </footer>
+      </div>
+      
 <script src="./js/flappyBird.js"></script>

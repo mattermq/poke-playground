@@ -1,3 +1,4 @@
+const gameStartBtn = document.getElementById('game-start');
 const canvas = document.getElementById('flappy-bird');
 const context = canvas.getContext('2d');
 
@@ -28,19 +29,19 @@ let gravity = 1.7;
 
 // Controls
 document.addEventListener('mousedown', (event) => {
-    yPos -= 25;
+  yPos -= 25;
 });
 
 document.addEventListener('touchstart', (event) => {
-    yPos -= 25;
+  yPos -= 25;
 });
 
 // Pipes Array
-const pipes = [];
+let pipes = [];
 pipes[0] = {
   x: canvas.width,
   y: 0,
-}
+};
 
 function draw() {
   context.drawImage(bg, 0, 0);
@@ -60,14 +61,20 @@ function draw() {
       });
     }
 
-    if ( xPos + bird.width >= pipes[i].x
+    if (xPos + bird.width >= pipes[i].x
       && xPos <= pipes[i].x + pipeUp.width
       && (yPos <= pipes[i].y + pipeUp.height
       || yPos + bird.height >= pipes[i].y + pipeUp.height + gap)
       || yPos + bird.height >= canvas.height - fg.height) {
-        location.reload();
-        return;
-      }
+      // location.reload();
+      context.clearRect(0, 0, 288, 512);
+
+      context.fillStyle = 'green';
+      context.font = '24px Lucida Console';
+      context.fillText('Game Over!', 83, canvas.height / 2);
+      context.fillText(`Score: ${score}`, 99, (canvas.height / 2) + 50);
+      return;
+    }
 
     if (pipes[i].x === 5) {
       score += 1;
@@ -80,11 +87,26 @@ function draw() {
 
   context.fillStyle = 'green';
   context.font = '24px Roboto';
-  context.fillText(`Score: ${score}`, 10, canvas.height - 20)
+  context.fillText(`Score: ${score}`, 10, canvas.height - 20);
 
   yPos += gravity;
 
   requestAnimationFrame(draw);
 }
+
+gameStartBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  pipes = [];
+  pipes[0] = {
+    x: canvas.width,
+    y: 0,
+  };
+
+  yPos = 100;
+  score = 0;
+
+  draw();
+});
 
 pipeBottom.onload = draw;
