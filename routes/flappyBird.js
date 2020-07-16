@@ -4,8 +4,12 @@ const router = express.Router();
 
 // GET Flappy Bird Page
 router.get('/', (req, res) => {
-  res.render('flappyBird');
-})
+  let username;
+  if (req.isAuthenticated()) {
+    username = req.session.passport.user.nickname;
+  }
 
+  res.render('flappyBird', { username });
+});
 
 module.exports = router;

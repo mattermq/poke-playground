@@ -26,18 +26,22 @@
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Games</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Leaderboards</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Pokemon of The Day</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">UserName</a>
+              {{#if username}}
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">{{username}}</a>
               <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
               </button>
               <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                   for="demo-menu-lower-right">
-                <li class="mdl-menu__item">See Stats</li>
-                <li class="mdl-menu__item">LogOut</li>
+                <li class="mdl-menu__item"><a class="mdl-navigation__link" href="#">See Stats</a></li>
+                <li class="mdl-menu__item"><a class="mdl-navigation__link" href="/login/exit">LogOut</a></li>
               </ul>
+              {{else}}
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/reg">Register</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/login">Log In</a>
+              {{/if}}
             </nav>
           </div>
         </div>
@@ -47,10 +51,12 @@
         <nav class="mdl-navigation">
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Main</a></span>
           <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="#">UserName</span>
+          {{#if username}}
+          <span class="mdl-navigation__link" href="#">{{username}}</span>
           <a class="mdl-navigation__link" href="/fb">See Stats</a>
-          <a class="mdl-navigation__link" href="/fb">LogOut</a>
+          <a class="mdl-navigation__link" href="/login/exit">LogOut</a>
            <div class="android-drawer-separator"></div>
+          {{/if}}
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Pokemon of The Day</a></span>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="#">Games</span>
@@ -60,7 +66,7 @@
           <a class="mdl-navigation__link" href="">Game 4</a>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="">Leaderboards</span>
-          <a class="mdl-navigation__link" href="">Game 1</a>
+          <a class="mdl-navigation__link" href="">Flappy Bird</a>
           <a class="mdl-navigation__link" href="">Game 2</a>
           <a class="mdl-navigation__link" href="">Game 3</a>
           <a class="mdl-navigation__link" href="">Game 4</a>

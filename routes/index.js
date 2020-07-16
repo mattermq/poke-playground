@@ -6,6 +6,11 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', async (req, res) => {
+  let username;
+  if (req.isAuthenticated()) {
+    username = req.session.passport.user.nickname;
+  }
+
   const randomPokeId = Math.floor(1 + Math.random() * 807);
 
   if (!req.cookies.pokeImgUrl) {
@@ -24,11 +29,11 @@ router.get('/', async (req, res) => {
       httpOnly: true,
     });
 
-    res.render('index', { pokeImgUrl, pokeName });
+    res.render('index', { username, pokeImgUrl, pokeName });
   } else {
     const { pokeImgUrl, pokeName } = req.cookies;
 
-    res.render('index', { pokeImgUrl, pokeName });
+    res.render('index', { username, pokeImgUrl, pokeName });
   }
 });
 
