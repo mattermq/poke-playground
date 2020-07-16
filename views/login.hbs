@@ -1,0 +1,110 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div id="top" class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Games</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Leaderboards</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Pokemon of The Day</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">UserName</a>
+              <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+              </button>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                  for="demo-menu-lower-right">
+                <li class="mdl-menu__item">See Stats</li>
+                <li class="mdl-menu__item">LogOut</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="android-drawer mdl-layout__drawer">
+        <nav class="mdl-navigation">
+          <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Main</a></span>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="#">UserName</span>
+          <a class="mdl-navigation__link" href="/fb">See Stats</a>
+          <a class="mdl-navigation__link" href="/fb">LogOut</a>
+           <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Pokemon of The Day</a></span>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="#">Games</span>
+          <a class="mdl-navigation__link" href="/fb">Flappy Bird</a>
+          <a class="mdl-navigation__link" href="">Game 2</a>
+          <a class="mdl-navigation__link" href="">Game 3</a>
+          <a class="mdl-navigation__link" href="">Game 4</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Leaderboards</span>
+          <a class="mdl-navigation__link" href="">Game 1</a>
+          <a class="mdl-navigation__link" href="">Game 2</a>
+          <a class="mdl-navigation__link" href="">Game 3</a>
+          <a class="mdl-navigation__link" href="">Game 4</a>
+          <div class="android-drawer-separator"></div>
+        </nav>
+      </div>
+
+    <div class="mdl-grid">
+
+    <div class="mdl-cell mdl-cell--6-col">
+
+      <div class="mdl-card mdl-shadow--4dp">
+        <div style="padding-bottom: 0px;" class="mdl-card__title">
+          <h5>Login</h5>
+        </div>
+        <div style="padding-top: 0px"class="mdl-card__supporting-text">
+          <form id="login-form" action="/login" method="POST">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="nickname">Your Nickname</label>
+              <input class="mdl-textfield__input" name="username" type="text" id="nickname">
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="password">Your Password</label>
+              <input class="mdl-textfield__input" name="password" type="password" id="password">
+            </div>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+            Log In
+          </button>
+          </form>
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+      </div>
+
+
+              <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">Sergey Vlasov, 2020</p>
+          </div>
+
+          <div class="mdl-mega-footer--bottom-section">
+            <a class="android-link mdl-typography--font-light" href="">GitHub</a>
+            <a class="android-link mdl-typography--font-light" href="">Telegram</a>
+          </div>
+
+        </footer>
+        </div>
+      </div>
