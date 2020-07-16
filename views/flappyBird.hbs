@@ -12,16 +12,28 @@
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Games</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Leaderboards</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Pokemon of The Day</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">UserName</a>
+              <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+              </button>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                  for="demo-menu-lower-right">
+                <li class="mdl-menu__item">See Stats</li>
+                <li class="mdl-menu__item">LogOut</li>
+              </ul>
             </nav>
           </div>
         </div>
       </div>
 
       <div class="android-drawer mdl-layout__drawer">
-
         <nav class="mdl-navigation">
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Main</a></span>
           <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="#">UserName</span>
+          <a class="mdl-navigation__link" href="/fb">See Stats</a>
+          <a class="mdl-navigation__link" href="/fb">LogOut</a>
+           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Pokemon of The Day</a></span>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="#">Games</span>
@@ -39,9 +51,6 @@
         </nav>
       </div>
 
-      <div class="android-content mdl-layout__content">
-        <a name="top"></a>
-      </div>
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--12-col">
     <canvas id="flappy-bird" width="288" height="512" style="margin: auto"></canvas>
@@ -49,12 +58,16 @@
 </div>
 <div class="mdl-grid">
   <form>
-    <button id="game-start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+    <button style="margin-bottom: 25px" id="game-start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
       Press to Play
     </button>
   </form>
 </div>
 
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+      </div>
+      
        <footer class="android-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
             <div class="mdl-mega-footer--right-section">
