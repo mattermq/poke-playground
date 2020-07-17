@@ -22,6 +22,7 @@ const arkanoidRouter = require('./routes/arkanoid.js');
 const apiRouter = require('./routes/api.js');
 const pokeRouter = require('./routes/poke.js');
 const leaderbRouter = require('./routes/leaderb.js');
+const profileRouter = require('./routes/profile.js');
 
 const app = express();
 
@@ -87,5 +88,6 @@ app.use('/ark', authMiddleware(), arkanoidRouter);
 app.use('/poke', pokeRouter);
 app.use('/api', apiRouter);
 app.use('/lb', leaderbRouter);
+app.use('/profile', authMiddleware(), profileRouter);
 
 app.listen(process.env.PORT || 3000);
