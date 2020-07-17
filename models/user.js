@@ -16,6 +16,12 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  fbScores: {
+    type: Array,
+  },
+  arkScores: {
+    type: Array,
+  },
 });
 
 const User = mongoose.model('user', userSchema);

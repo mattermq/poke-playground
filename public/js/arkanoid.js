@@ -173,6 +173,15 @@ function draw() {
         ctx.font = '24px Lucida Console';
         ctx.fillText('Game Over!', 180, canvas.height / 2);
         ctx.fillText(`Score: ${score}`, 198, (canvas.height / 2) + 50);
+
+        fetch('/api/scores/ark', {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ score }),
+        });
+
         return;
       }
 

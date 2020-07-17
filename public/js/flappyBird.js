@@ -1,3 +1,4 @@
+const nickname = document.getElementById('username').innerText;
 const gameStartBtn = document.getElementById('game-start');
 const canvas = document.getElementById('flappy-bird');
 const context = canvas.getContext('2d');
@@ -28,11 +29,11 @@ let yPos = 100;
 let gravity = 1.7;
 
 // Controls
-document.addEventListener('mousedown', (event) => {
+document.addEventListener('mousedown', () => {
   yPos -= 25;
 });
 
-document.addEventListener('touchstart', (event) => {
+document.addEventListener('touchstart', () => {
   yPos -= 25;
 });
 
@@ -73,6 +74,15 @@ function draw() {
       context.font = '24px Lucida Console';
       context.fillText('Game Over!', 83, canvas.height / 2);
       context.fillText(`Score: ${score}`, 99, (canvas.height / 2) + 50);
+
+      fetch('/api/scores/fb', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ score }),
+      });
+
       return;
     }
 
