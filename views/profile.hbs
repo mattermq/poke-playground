@@ -67,17 +67,15 @@
 <table width="333" class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
-      <th class="mdl-data-table__cell--non-numeric">Name</th>
-      <th class="mdl-data-table__cell--non-numeric">Nickname</th>
-      <th>HighScore</th>
+      <th>Date</th>
+      <th>Score</th>
     </tr>
   </thead>
   <tbody>
-    {{#each fbUsersArray}}
+    {{#each fbScores}}
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">{{this.username}}</td>
-      <td class="mdl-data-table__cell--non-numeric">{{this.nickname}}</td>
-      <td>{{this.highFbScore}}</td>
+      <td>{{this.date}}</td>
+      <td>{{this.score}}</td>
     </tr>
     {{/each}}
   </tbody>
@@ -95,17 +93,15 @@
         <table width="333" class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
-      <th class="mdl-data-table__cell--non-numeric">Name</th>
-      <th class="mdl-data-table__cell--non-numeric">Nickname</th>
-      <th>High Score</th>
+      <th>Date</th>
+      <th>Score</th>
     </tr>
   </thead>
   <tbody>
-    {{#each arkUsersArray}}
+    {{#each arkScores}}
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">{{this.username}}</td>
-      <td class="mdl-data-table__cell--non-numeric">{{this.nickname}}</td>
-      <td>{{this.highArkScore}}</td>
+      <td>{{this.date}}</td>
+      <td>{{this.score}}</td>
     </tr>
     {{/each}}
   </tbody>
