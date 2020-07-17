@@ -9,11 +9,19 @@ router.get('/', async (req, res) => {
 
   const user = await User.findById(_id);
 
-  console.log(user);
+  const { fbScores, arkScores } = user;
 
+  fbScores.forEach((el) => {
+    const date = new Date(el.date);
+    el.date = `${date.getFullYear()}.${date.getMonth()}.${date.getDate()}`;
+  });
 
+  arkScores.forEach((el) => {
+    const date = new Date(el.date);
+    el.date = `${date.getFullYear()}.${date.getMonth()}.${date.getDate()}`;
+  });
 
-  res.render('profile', { username });
+  res.render('profile', { username, fbScores, arkScores });
 });
 
 module.exports = router;
