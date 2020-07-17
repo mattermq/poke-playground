@@ -144,8 +144,16 @@ function draw() {
 
     ctx.fillStyle = 'rgb(139,195,74)';
     ctx.font = '24px Lucida Console';
-    ctx.fillText('Congratulations! You Win!', 180, canvas.height / 2);
-    ctx.fillText(`Score: ${score}`, 99, (canvas.height / 2) + 50);
+    ctx.fillText('Congratulations! You Win!', 100, canvas.height / 2);
+    ctx.fillText(`Score: ${score}`, 150, (canvas.height / 2) + 50);
+
+    fetch('/api/scores/ark', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ score }),
+    });
 
     return;
   }
