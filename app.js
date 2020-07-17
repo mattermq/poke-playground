@@ -19,6 +19,7 @@ const regRouter = require('./routes/reg.js');
 const loginRouter = require('./routes/login.js');
 const flappyBirdRouter = require('./routes/flappyBird.js');
 const arkanoidRouter = require('./routes/arkanoid.js');
+const apiRouter = require('./routes/api.js');
 
 const app = express();
 
@@ -69,10 +70,10 @@ function authMiddleware() {
   };
 }
 
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   console.log(req.session);
   next();
-});
+}); */
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
@@ -81,5 +82,6 @@ app.use('/reg', regRouter);
 app.use('/login', loginRouter);
 app.use('/fb', authMiddleware(), flappyBirdRouter);
 app.use('/ark', authMiddleware(), arkanoidRouter);
+app.use('/api', apiRouter);
 
 app.listen(process.env.PORT || 3000);

@@ -36,22 +36,25 @@
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Main</a></span>
           <div class="android-drawer-separator"></div>
           {{#if username}}
-          <span class="mdl-navigation__link" href="#">{{username}}</span>
+          <span id="username" class="mdl-navigation__link" href="#">{{username}}</span>
           <a class="mdl-navigation__link" href="/fb">See Stats</a>
           <a class="mdl-navigation__link" href="/login/exit">LogOut</a>
            <div class="android-drawer-separator"></div>
+          {{else}}
+          <a class="mdl-navigation__link" href="/reg">Register</a>
+          <a class="mdl-navigation__link" href="/login">Log In</a>
           {{/if}}
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/">Pokemon of The Day</a></span>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="#">Games</span>
           <a class="mdl-navigation__link" href="/fb">Flappy Bird</a>
-          <a class="mdl-navigation__link" href="">Game 2</a>
+          <a class="mdl-navigation__link" href="">Arkanoid</a>
           <a class="mdl-navigation__link" href="">Game 3</a>
           <a class="mdl-navigation__link" href="">Game 4</a>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="">Leaderboards</span>
           <a class="mdl-navigation__link" href="">Flappy Bird</a>
-          <a class="mdl-navigation__link" href="">Game 2</a>
+          <a class="mdl-navigation__link" href="">Arkanoid</a>
           <a class="mdl-navigation__link" href="">Game 3</a>
           <a class="mdl-navigation__link" href="">Game 4</a>
           <div class="android-drawer-separator"></div>
