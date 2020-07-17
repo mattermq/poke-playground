@@ -18,7 +18,7 @@ const indexRouter = require('./routes/index');
 const regRouter = require('./routes/reg.js');
 const loginRouter = require('./routes/login.js');
 const flappyBirdRouter = require('./routes/flappyBird.js');
-const usersRouter = require('./routes/users');
+const arkanoidRouter = require('./routes/arkanoid.js');
 
 const app = express();
 
@@ -79,7 +79,7 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
 app.use('/', indexRouter);
 app.use('/reg', regRouter);
 app.use('/login', loginRouter);
-app.use('/fb', flappyBirdRouter);
-app.use('/users', usersRouter);
+app.use('/fb', authMiddleware(), flappyBirdRouter);
+app.use('/ark', arkanoidRouter);
 
 app.listen(process.env.PORT || 3000);

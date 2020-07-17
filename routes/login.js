@@ -4,7 +4,12 @@ const passport = require('passport');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('login');
+  let username;
+  if (req.isAuthenticated()) {
+    username = req.session.passport.user.nickname;
+  }
+
+  res.render('login', { username });
 });
 
 router.post('/',

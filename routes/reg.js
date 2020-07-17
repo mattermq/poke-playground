@@ -6,7 +6,12 @@ const router = express.Router();
 
 // GET reg page
 router.get('/', (req, res) => {
-  res.render('reg');
+  let username;
+  if (req.isAuthenticated()) {
+    username = req.session.passport.user.nickname;
+  }
+
+  res.render('reg', { username });
 });
 
 // POST new user

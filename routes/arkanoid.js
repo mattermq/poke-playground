@@ -2,14 +2,14 @@ const express = require('express');
 
 const router = express.Router();
 
-// GET Flappy Bird Page
+// GET Arkanoid Page
 router.get('/', (req, res) => {
   let username;
   if (req.isAuthenticated()) {
     username = req.session.passport.user.nickname;
   }
 
-  res.render('flappyBird', { username });
+  res.render('arkanoid', { username });
 });
 
 module.exports = router;
