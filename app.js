@@ -80,6 +80,6 @@ app.use('/', indexRouter);
 app.use('/reg', regRouter);
 app.use('/login', loginRouter);
 app.use('/fb', authMiddleware(), flappyBirdRouter);
-app.use('/ark', arkanoidRouter);
+app.use('/ark', authMiddleware(), arkanoidRouter);
 
 app.listen(process.env.PORT || 3000);
