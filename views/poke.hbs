@@ -1,6 +1,6 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-      <div id="top" class="android-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
 
           <!-- Add spacer, to align navigation to the right in desktop -->
@@ -9,7 +9,6 @@
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/">Games</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Leaderboards</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/poke">Pokémon of The Hour</a>
               {{#if username}}
@@ -61,42 +60,33 @@
         </nav>
       </div>
 
-    <div class="mdl-grid">
-
-    <div class="mdl-cell mdl-cell--6-col">
-
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
       <div class="mdl-card mdl-shadow--4dp">
-        <div style="padding-bottom: 0px;" class="mdl-card__title">
-          <h5>Login to Play</h5>
-        </div>
-        <div style="padding-top: 0px"class="mdl-card__supporting-text">
-          <form id="login-form" action="/login" method="POST">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <label class="mdl-textfield__label" for="nickname">Your Nickname</label>
-              <input class="mdl-textfield__input" name="username" type="text" id="nickname">
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <label class="mdl-textfield__label" for="password">Your Password</label>
-              <input class="mdl-textfield__input" name="password" type="password" id="password">
-            </div>
-          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
-            Log In
+      <div class="mdl-card__media">
+        <img style="margin: 7px"src="{{pokeImgUrl}}" width="320" height="400" border="0" alt="">
+      </div>
+      <div class="mdl-card__supporting-text">
+        Your Pokémon of the hour is {{pokeName}}!
+      </div>
+      <div class="mdl-card__actions">
+        <form  action="/" method="GET">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+            Play Some Games!
           </button>
-          </form>
-        </div>
-
+        </form>
+      </div>
     </div>
-
     </div>
-
-    </div>
+</div>
 
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
       </div>
 
 
-              <footer class="android-footer mdl-mega-footer">
+
+        <footer class="android-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
             <div class="mdl-mega-footer--right-section">
               <a class="mdl-typography--font-light" href="#top">
@@ -116,5 +106,5 @@
           </div>
 
         </footer>
-        </div>
       </div>
+    </div>

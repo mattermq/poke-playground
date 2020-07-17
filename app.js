@@ -20,6 +20,7 @@ const loginRouter = require('./routes/login.js');
 const flappyBirdRouter = require('./routes/flappyBird.js');
 const arkanoidRouter = require('./routes/arkanoid.js');
 const apiRouter = require('./routes/api.js');
+const pokeRouter = require('./routes/poke.js');
 
 const app = express();
 
@@ -82,6 +83,7 @@ app.use('/reg', regRouter);
 app.use('/login', loginRouter);
 app.use('/fb', authMiddleware(), flappyBirdRouter);
 app.use('/ark', authMiddleware(), arkanoidRouter);
+app.use('/poke', pokeRouter);
 app.use('/api', apiRouter);
 
 app.listen(process.env.PORT || 3000);
