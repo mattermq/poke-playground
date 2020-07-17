@@ -29,13 +29,13 @@
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/lb">Leaderboards</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/poke">Pokémon of The Hour</a>
               {{#if username}}
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">{{username}}</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/profile">{{username}}</a>
               <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
               </button>
               <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                   for="demo-menu-lower-right">
-                <li class="mdl-menu__item"><a class="mdl-navigation__link" href="#">See Stats</a></li>
+                <li class="mdl-menu__item"><a class="mdl-navigation__link" href="/profile">See Stats</a></li>
                 <li class="mdl-menu__item"><a class="mdl-navigation__link" href="/login/exit">LogOut</a></li>
               </ul>
               {{else}}
@@ -53,7 +53,7 @@
           <div class="android-drawer-separator"></div>
           {{#if username}}
           <span class="mdl-navigation__link" href="#">{{username}}</span>
-          <a class="mdl-navigation__link" href="/fb">See Stats</a>
+          <a class="mdl-navigation__link" href="/profile">See Stats</a>
           <a class="mdl-navigation__link" href="/login/exit">LogOut</a>
            <div class="android-drawer-separator"></div>
           {{else}}
@@ -62,17 +62,13 @@
           {{/if}}
           <span class="mdl-navigation__link"><a class="android-link mdl-typography--font-light" href="/poke">Pokémon of The Hour</a></span>
           <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="#">Games</span>
+          <span class="mdl-navigation__link" href="/">Games</span>
           <a class="mdl-navigation__link" href="/fb">Flappy Bird</a>
-          <a class="mdl-navigation__link" href="">Arkanoid</a>
-          <a class="mdl-navigation__link" href="">Game 3</a>
-          <a class="mdl-navigation__link" href="">Game 4</a>
+          <a class="mdl-navigation__link" href="/ark">Arkanoid</a>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="/lb">Leaderboards</span>
           <a class="mdl-navigation__link" href="">Flappy Bird</a>
           <a class="mdl-navigation__link" href="">Arkanoid</a>
-          <a class="mdl-navigation__link" href="">Game 3</a>
-          <a class="mdl-navigation__link" href="">Game 4</a>
           <div class="android-drawer-separator"></div>
         </nav>
       </div>
