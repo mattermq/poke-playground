@@ -4,7 +4,7 @@
 Реализовано с помощью <a href="https://pokeapi.co/">PokéAPI</a>.
 
 ## Обзор
-
+![Poke Playground](https://github.com/re-mark/pokemon-playground/blob/master/readme-assets/poke.gif)
 
 ## Запуск
 ```js
