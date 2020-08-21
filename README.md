@@ -1,4 +1,4 @@
-# <https://pokemon-playground.herokuapp.com/>Pokémon Playground!>
+# <a href='https://pokemon-playground.herokuapp.com/'>Pokémon Playground!</a>
 
 My learning project.
 Stack: Node.js, Express.js, Handlebars, MongoDB, Material Design Lite.
