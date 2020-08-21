@@ -1,9 +1,13 @@
-# web-games-app
-Pokémon Playground!
-My learning project. Stack: Node.js, Express.js, Handlebars, MongoDB, Material Design Lite.
+# <a href='https://pokemon-playground.herokuapp.com/'>Pokémon Playground!</a>
 
-I used PokéAPI to implement this project.
+**Pokémon Playground** - игровая площадка, где вы можете поиграть в игры, соревнуясь с другими игроками в таблице лидеров! А каждый час вас будет ждать новый покемон!
+Реализовано с помощью <a href="https://pokeapi.co/">PokéAPI</a>.
 
-Every hour you can pick up a random pokemon and go play some games in Pokémon Playground!
+## Обзор
 
-You can join this project by link.
+
+## Запуск
+```js
+npm i 
+npm start
+```
